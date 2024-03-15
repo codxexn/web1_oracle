@@ -1,0 +1,28 @@
+/*MY SQL은 자동증가되지만 ORACLE 은 자동증가 안된다.*/
+/*건너 뛰어도 상관없다. 중복만 없으면 된다. 시퀀스는 객체라고 보면 된다. 테이블마다 만들어야 함!*/
+CREATE SEQUENCE SEQ_PARENTS;
+
+CREATE TABLE TBL_PARENTS(
+   ID NUMBER CONSTRAINT PK_PARENTS PRIMARY KEY,
+   PARENTS_NAME VARCHAR2(1000) NOT NULL,
+   PARENTS_AGE NUMBER NOT NULL,
+   PARENTS_GENDER VARCHAR2(1000) DEFAULT 'N',
+   PARENTS_PHONE VARCHAR2(1000) NOT NULL UNIQUE,
+   PARENTS_ADDRESS VARCHAR2(1000) DEFAULT 'N' UNIQUE
+);
+
+/*학부모 추가*/
+INSERT INTO TBL_PARENTS
+VALUES(SEQ_PARENTS.NEXTVAL, '한동석', 40, '남자', '01012341234', '경기도 남양주');
+
+/*결과보는 쿼리, 조건 안쓰면 전체조회, 컬럼명 써주면 해당 컬럼만 조회, 실무에서는 * FROM 쓰면 안된다!: 성능 떨어짐*/
+SELECT * FROM TBL_PARENTS;
+
+/*마이페이지 회원정보 수정 등*/
+UPDATE TBL_PARENTS 
+SET PARENTS_NAME = '홍길동'
+WHERE ID = 1;
+
+/*DDL: TRUNCATE 속도가 빠르지만, DML: DELETE 는 복구가 된다.*/
+/*회원 탈퇴*/
+DELETE FROM TBL_PARENTS;
