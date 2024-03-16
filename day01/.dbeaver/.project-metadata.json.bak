@@ -1,1 +1,1 @@
-{"resources":{"Scripts/Script.sql":{"sql-editor-data-source-id":"oracle_thin-18e42712c01-2030050f42cc4ac5"}}}
+{"resources":{"Scripts/DDL.sql":{"sql-editor-data-source-id":"oracle_thin-18e42712c01-2030050f42cc4ac5","default-datasource":"oracle_thin-18e42712c01-2030050f42cc4ac5","default-schema":"SCOTT"}}}
