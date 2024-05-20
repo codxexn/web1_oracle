@@ -523,7 +523,7 @@ WHERE 조건식
 
 ## 📝 Day04
 > ### JOIN
-> #### OUTER JOIN: 외부조
+> #### OUTER JOIN: 외부조인
 > OUTER JOIN 은 **조건식이 FALSE라도 무조건 나와야하는 정보가 있는 테이블이 있을 때** 사용  
 > **ON절에 작성된 조건식이 FALSE 일지라도 모든 정보를 조회해야 할 때** 사용한다.  
 > (INNER JOIN 은 ON 절에 있는 조건이 TRUE 일 때만 합친다. )
