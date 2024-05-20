@@ -553,7 +553,7 @@ VO: Value Object
 
 <br>
 
-> #### View: react
+> #### View
 
 <br>
 
